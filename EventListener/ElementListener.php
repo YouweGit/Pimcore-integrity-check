@@ -32,10 +32,12 @@ class ElementListener
             $element = $event->getObject();
         }
 
-        if ($element) {
-            if ($element->getDependencies()->getRequiredByTotalCount() > 0) {
-                throw new \RuntimeException('Sorry your object is linked to other objects');
-            }
+        if (!$element) {
+            return null
+        }
+        
+        if ($element->getDependencies()->getRequiredByTotalCount() > 0) {
+            throw new \RuntimeException('Sorry your object is linked to other objects');
         }
     }
 }

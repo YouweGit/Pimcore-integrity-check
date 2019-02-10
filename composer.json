@@ -1,0 +1,34 @@
+{
+  "name": "youwe/integrity-check",
+  "type": "pimcore-bundle",
+  "license": "GPL-3.0-or-later",
+  "description": "Disable the functionality to remove a element that is required by other elements",
+  "keywords": [
+    "pimcore",
+    "pimcore-bundle"
+  ],
+  "homepage": "https://github.com/YouweGit/pimcore-integrity-check",
+  "authors": [
+    {
+      "name": "Joris Ros",
+      "email": "j.ros@youwe.nl",
+      "homepage": "https://www.youwe.nl/",
+      "role": "Engineer"
+    }
+  ],
+  "require": {
+    "pimcore/pimcore": "^5.4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "IntegrityCheckBundle\\": "/"
+    }
+  },
+  "extra": {
+    "pimcore": {
+      "bundles": [
+        "IntegrityCheckBundle\\IntegrityCheckBundle"
+      ]
+    }
+  }
+}

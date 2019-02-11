@@ -9,7 +9,8 @@
  * files that are distributed with this source code.
  *
  * @copyright  Copyright (c) 2018-2019 Youwe (https://www.youwe.nl)
- * @license    https://github.com/YouweGit/pimcore-integrity-check/blob/master/LICENSE.md     GNU General Public License version 3 (GPLv3)
+ * @license    https://github.com/YouweGit/pimcore-integrity-check/blob/master/LICENSE.md
+ *             GNU General Public License version 3 (GPLv3)
  */
 
 namespace IntegrityCheckBundle\DependencyInjection;

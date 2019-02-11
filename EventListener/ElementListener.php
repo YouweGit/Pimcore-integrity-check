@@ -9,7 +9,8 @@
  * files that are distributed with this source code.
  *
  * @copyright  Copyright (c) 2018-2019 Youwe (https://www.youwe.nl)
- * @license    https://github.com/YouweGit/pimcore-integrity-check/blob/master/LICENSE.md     GNU General Public License version 3 (GPLv3)
+ * @license    https://github.com/YouweGit/pimcore-integrity-check/blob/master/LICENSE.md
+ *             GNU General Public License version 3 (GPLv3)
  */
 
 namespace IntegrityCheckBundle\EventListener;
@@ -19,21 +20,20 @@ use Pimcore\Event\Model\DataObjectEvent;
 use Pimcore\Event\Model\DocumentEvent;
 use Pimcore\Event\Model\ElementEventInterface;
 
-
 class ElementListener
 {
     public function onPreDelete(ElementEventInterface $event)
     {
-        if($event instanceof AssetEvent) {
+        if ($event instanceof AssetEvent) {
             $element = $event->getAsset();
-        } else if ($event instanceof DocumentEvent) {
+        } elseif ($event instanceof DocumentEvent) {
             $element = $event->getDocument();
-        } else if ($event instanceof DataObjectEvent) {
+        } elseif ($event instanceof DataObjectEvent) {
             $element = $event->getObject();
         }
 
         if (!$element) {
-            return null
+            return null;
         }
         
         if ($element->getDependencies()->getRequiredByTotalCount() > 0) {
